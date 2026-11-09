@@ -12,7 +12,13 @@ class FilaCeroApp extends StatelessWidget {
     return MaterialApp(
       title: AppStrings.appName,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(colorSchemeSeed: Colors.orange, useMaterial3: true),
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFFFF6B00),
+          brightness: Brightness.light,
+        ),
+      ),
       home: const WelcomeScreen(),
     );
   }
